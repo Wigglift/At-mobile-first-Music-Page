@@ -13,7 +13,7 @@ export default function Header() {
     }
 
     return (
-        <header className={styles.header}>
+        <header className={`container ${styles.header}`}>
             <div className={`row ${styles.headerContent}`}>
                 <div className={styles.userIcon}>
                     <i class="fa-solid fa-user"></i>

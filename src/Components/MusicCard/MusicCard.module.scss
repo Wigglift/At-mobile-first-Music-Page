@@ -1,0 +1,54 @@
+@use "../../Scss/Index.scss";
+
+.musicCard{
+    margin: 1em;
+    padding: 1em;
+    max-width: 250px;
+    transition: all 0.3s ease;
+    height: fit-content;
+
+    &:hover{
+        box-shadow: 0 0 1em Index.$primary;
+    }
+}
+
+figure{
+    margin: 0;
+
+    img{
+        width: 100%;
+        border-radius: 0.5em;
+    }
+}
+
+.musicInfo{
+    display: flex;
+    position: relative
+}
+
+.musicTextInfo{
+    top: 3em;
+    width: 100%;
+    display: flex;
+
+    p{
+        width: 50%;
+        margin: 0;
+    }
+}
+
+.musicText{
+width: 70%;
+}
+
+.playButton{
+    position: relative;
+    width: 30%;
+    top: 0.65em;
+}
+
+.duration{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+    text-align: right;
+}
