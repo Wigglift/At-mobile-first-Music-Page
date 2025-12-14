@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import "./Scss/Index.scss";
+import Footer from "./Components/Footer/Footer";
 
 export default function App() {
   
@@ -189,6 +190,7 @@ export default function App() {
     <div className="App">
       <Header />
       <Main  musics={musics}/>
+      <Footer />  
     </div>
   );
 }
