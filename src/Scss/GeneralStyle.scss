@@ -1,0 +1,15 @@
+@use "Responsivity";
+@use "ColorPallete";
+
+body{
+    background-color: ColorPallete.$quaternary;
+    color: white;
+    font-family: "Noto Sans Display", sans-serif;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px;
+
+    @include Responsivity.responsive(desktop){
+        font-size: 14px;
+    }
+}

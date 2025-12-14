@@ -1,0 +1,59 @@
+@use "../../Scss/Index";
+
+$inative: rgb(255, 255, 255, 0.70);
+$active: rgb(255, 255, 255, 1);
+
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: Index.$tertiary;
+    border-radius: 8px;
+    padding: 0.3em 0.5em;
+    max-width: 30em;
+    box-sizing: border-box;
+    border: 0.1em solid transparent;
+    border-radius: 30em;
+    transition: all 0.5s ease;
+    font-weight: 100;
+    color: $inative;
+
+        &:focus-within{
+            border-color: white;
+            background-color: Index.$quaternary;
+            border: 0.1em solid rgba(128, 128, 128, 0.45);
+            color: $active;
+        }
+
+    @include Index.responsive(smallMobile){
+        position: relative;
+        width: 50%;
+    }
+
+    @include Index.responsive(desktop){
+        &:hover{
+            border-color: white;
+            background-color: Index.$quaternary;
+            border: 0.1em solid rgba(128, 128, 128, 0.45);
+            color: $active;
+        }
+    }
+}
+
+.search{
+    font-size: 1.3em;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: inherit;
+
+    &:focus{
+        outline: none;
+    }
+
+}
+
+i{
+    font-size: 1.5em;
+}

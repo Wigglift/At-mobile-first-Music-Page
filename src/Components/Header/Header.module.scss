@@ -1,0 +1,82 @@
+@use '../../Scss/Index';
+
+.header{
+    margin-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    height: auto;
+}
+
+.headerContent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.userIcon{
+    font-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    background-color: Index.$tertiary;
+    padding: 0.4em;
+    left: 1.25em;
+    transition: all 0.3s ease;
+    border: 0.1em solid transparent;
+
+    &:active{
+        &:hover{
+        background-color: Index.$quaternary;
+        border: 0.1em solid Index.$secondary;
+    }
+
+    }
+
+    @include Index.responsive(desktop){
+        &:hover{
+        background-color: Index.$quaternary;
+        border: 0.1em solid Index.$secondary;
+    }
+
+    }
+
+    @include Index.responsive(smallMobile){
+        left: 0.1em;
+    }
+}
+
+.menuButton{
+    position: absolute;
+    right: 1.25em;
+    font-size: 1.5em;
+    @include Index.responsive(smallMobile){
+        right: 0.5em;
+    }
+    @include Index.responsive(desktop){
+        display: none;
+    }
+}
+
+.headerSocials{
+    display: none;
+
+    @include Index.responsive(desktop){
+        display: flex;
+        position: absolute;
+        right: 1.5em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    figure{
+        margin: 0;
+    }
+}
+
+.headerLogo{
+    width: 5em;
+}

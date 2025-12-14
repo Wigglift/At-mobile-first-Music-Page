@@ -1,0 +1,16 @@
+@use "../../Scss/Index";
+
+.menuButton{
+    transition: all 0.3s ease;
+    color: Index.$secondary;
+    border: 0.1em solid transparent;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    &:active{
+        border: 0.1em solid Index.$primary;
+    }
+}
+
+.menuButton_active{
+    color: Index.$primary;
+}

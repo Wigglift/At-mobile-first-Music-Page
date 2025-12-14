@@ -1,0 +1,25 @@
+@use "../../Scss/Index";
+
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    gap: 1em;
+    
+    i{
+        color: Index.$primary;
+        transition: all 0.3s ease;
+
+        @include Index.responsive(mobile){
+            &:active{
+            color: Index.$secondary;
+        }
+    }
+
+        @include Index.responsive(desktop){
+        &:hover{
+            color: Index.$secondary;
+        }
+    }
+}
+}

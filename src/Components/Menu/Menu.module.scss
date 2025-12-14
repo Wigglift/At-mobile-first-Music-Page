@@ -1,0 +1,95 @@
+@use "../../Scss/Index.scss";
+
+.menu{
+    margin-top: 1em;
+    max-height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    opacity: 0;
+    transition: all 0.3s ease;
+    gap: 2em;
+    transform: translateY(-20%);
+    background-color: transparent;
+    pointer-events: none;
+
+    @include Index.responsive(desktop){
+        opacity: 1;
+        max-height: none;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+}
+
+.menu_active{
+    opacity: 1;
+    max-height: 24em;
+    transform: translateY(0);
+    pointer-events: auto;
+    
+}
+
+.menuList{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    align-items: center;
+
+    @include Index.responsive(desktop){
+        margin-top: 0.5em;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+}
+
+.menuItem{
+    color: rgba(255, 255, 255, 0.7);
+    background-color: Index.$tertiary;
+    font-size: 1.2em;
+    padding: 0.5em 0;
+    width: 50%;
+    text-align: center;
+    border: 0.1em solid transparent;
+    border-radius: 30em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:active{
+        background-color: Index.$quaternary;
+        border: 0.1em solid Index.$primary;
+    }
+
+    @include Index.responsive(desktop){
+        width: 20%;
+
+        &:hover{
+            background-color: Index.$quaternary;
+            border: 0.1em solid Index.$primary;
+        }
+    }
+}
+
+.menuHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;
+
+    @include Index.responsive(desktop){
+        display: none;
+    }
+
+
+    figure{
+        margin: 0;
+    }
+}
+
+.menuLogo{
+    width: 5em;
+    margin-bottom: 0;
+
+}
